@@ -1,6 +1,7 @@
 const resultBtn = document.getElementById('result');
 let calculatorOn = false;
 let decimalAdded = false;
+let currentResult='';
 
 
 function appendNumber(num) {
@@ -32,13 +33,19 @@ function clearInput() {
 }
 
 function backspace() {
-    if (!calculatorOn) return;
+    if (!calculatorOn || currentResult === '') return;
+    if (String(currentResult) === 'Infinity' || (currentResult) ==='-Infinity' || (currentResult) === 'Error') {
+        clearInput();
+        return;
+    }
     currentResult = currentResult.slice(0, -1);
     if (currentResult[currentResult.length - 1] === '.') {
         decimalAdded = false;
     }
     updateDisplay(currentResult);
 }
+
+
 
 
 function toggleCalculator() {
@@ -106,12 +113,3 @@ function evaluateExpression(expression) {
 
     return result;
 }
-
-
-
-
-
-
-
-
-
