@@ -37,7 +37,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 20px;
   -moz-column-gap: 10px;
-  column-gap: 10px;
+       column-gap: 10px;
 }
 
 button {
@@ -52,8 +52,8 @@ button {
 }
 
 .ac {
-  background-color: #a4a7a8;
   color: white;
+  background-color: red;
 }
 
 .equal {
@@ -76,6 +76,4 @@ button {
   text-align: left;
   padding-left: 44px;
   font-size: 33px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

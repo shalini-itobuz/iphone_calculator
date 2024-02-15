@@ -11,6 +11,7 @@ function appendNumber(num) {
 
 function appendOperator(operator) {
   if (!calculatorOn || currentResult === "") return;
+  currentResult = currentResult.replace(/[+\-*/]$/, '');
   currentResult += operator;
   decimalAdded = false;
   updateDisplay(currentResult);
@@ -112,3 +113,14 @@ function evaluateExpression(expression) {
 
   return result;
 }
+
+document.addEventListener("keydown", function(event) {
+  const key = event.key;
+  if (key >= "0" && key <= "9") {
+    appendNumber(key);
+  } else if (key === "+" || key === "-" || key === "*" || key === "/") {
+    appendOperator(key);
+  } else if (key === "Enter") {
+    calculate();
+  }
+});
