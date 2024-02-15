@@ -1,0 +1,96 @@
+$color_1: white;
+$font-family_1: Arial, sans-serif;
+$background-color_white: white;
+$background-color_black: black;
+$background-color_orange: #fe9d07;
+$background-color_gray: #a4a7a8;
+$background-color_blackgrey: #333333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color_white;
+  font-family: $font-family_1;
+}
+
+.calculator {
+  width: 500px;
+  height: 800px;
+  margin: 50px auto;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: $background-color_black;
+  position: relative;
+}
+
+.result {
+  width: 100%;
+  height: 124px;
+  font-size: 60px;
+  margin-bottom: 10px;
+  background-color: $background-color_black;
+  color: $color_1;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+button {
+  height: 104px;
+  width: 104px;
+  font-size: 34px;
+  border: none;
+  cursor: pointer;
+  background-color: $background-color_orange;
+  border-radius: 50%;
+  color: $color_1;
+}
+
+.equal {
+  background-color: $background-color_orange;
+}
+
+.clearInp {
+  background-color: $background-color_gray;
+}
+
+.numbers {
+  background-color: $background-color_blackgrey;
+  font-size: 27px;
+}
+
+.zero {
+  width: unset;
+  grid-column: span 2;
+  border-radius: 50px;
+  text-align: left;
+  padding-left: 44px;
+  font-size: 33px;
+}
+
+.historyBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #fe9d07;
+  border-radius: 50%;
+  color: white;
+}
