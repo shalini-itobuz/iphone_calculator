@@ -2,16 +2,22 @@ const resultBtn = document.getElementById("result");
 let calculatorOn = false;
 let decimalAdded = false;
 let currentResult = "";
+let keySequence = "";
 
 function appendNumber(num) {
   if (!calculatorOn) return;
   currentResult += num;
+  keySequence += num;
   updateDisplay(currentResult);
+
+  if (keySequence === "1111") {
+    playAppleLogoAnimation();
+  }
 }
 
 function appendOperator(operator) {
   if (!calculatorOn || currentResult === "") return;
-  currentResult = currentResult.replace(/[+\-*/]$/, '');
+  currentResult = currentResult.replace(/[+\-*/]$/, "");
   currentResult += operator;
   decimalAdded = false;
   updateDisplay(currentResult);
@@ -57,7 +63,7 @@ function toggleCalculator() {
     acButton.style.backgroundColor = "green";
   } else {
     acButton.textContent = "OFF";
-    acButton.style.backgroundColor = "";
+    acButton.style.backgroundColor = "red";
   }
   resultBtn.value = "";
   clearInput();
@@ -114,7 +120,23 @@ function evaluateExpression(expression) {
   return result;
 }
 
-document.addEventListener("keydown", function(event) {
+function playAppleLogoAnimation() {
+  const appleLogo = document.createElement("img");
+  appleLogo.src = "animation.gif";
+  appleLogo.style.position = "absolute";
+  appleLogo.style.top = "50%";
+  appleLogo.style.left = "50%";
+  appleLogo.style.transform = "translate(-50%, -50%)";
+  appleLogo.style.width = "50%";
+  appleLogo.style.zIndex = "9999";
+  const calculator = document.querySelector(".calculator");
+  calculator.appendChild(appleLogo);
+  setTimeout(() => {
+    appleLogo.remove();
+  }, 5000);
+}
+
+document.addEventListener("keydown", function (event) {
   const key = event.key;
   if (key >= "0" && key <= "9") {
     appendNumber(key);
