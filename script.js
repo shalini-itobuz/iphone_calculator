@@ -122,7 +122,7 @@ function evaluateExpression(expression) {
 
 function playAppleLogoAnimation() {
   const appleLogo = document.createElement("img");
-  appleLogo.src = "animation.gif";
+  appleLogo.src = "./images/animation.gif";
   appleLogo.style.position = "absolute";
   appleLogo.style.top = "50%";
   appleLogo.style.left = "50%";
