@@ -7,16 +7,55 @@
 body {
   background-color: white;
   font-family: Arial, sans-serif;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3%;
+  color: rgba(255, 0, 255, 0.869);
 }
 
 .calculator {
-  width: 500px;
-  height: 800px;
-  margin: 50px auto;
+  width: 400px;
+  height: 750px;
+  margin: 100px auto;
   border: 2px solid #ccc;
-  border-radius: 15px;
+  border-radius: 80px;
   padding: 20px;
   background-color: black;
+  position: relative;
+  outline: 20px solid #f7d2d2;
+}
+
+.dynamic-island {
+  width: 30%;
+  height: 3%;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: absolute;
+  left: 36%;
+  display: flex;
+}
+
+.camera {
+  width: 16%;
+  height: 82%;
+  border-radius: 50%;
+  background-color: #333333;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.notificationPanel {
+  width: 50%;
+  height: 71%;
+  border-radius: 50px;
+  background-color: #333333;
+  position: absolute;
+  top: 13%;
+  left: 45%;
 }
 
 .result {
@@ -24,6 +63,7 @@ body {
   height: 124px;
   font-size: 60px;
   margin-bottom: 10px;
+  margin-top: 5px;
   background-color: black;
   color: white;
   border: none;
@@ -38,11 +78,12 @@ body {
   row-gap: 20px;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  margin-top: 6%;
 }
 
 button {
-  height: 104px;
-  width: 104px;
+  height: 84px;
+  width: 81px;
   font-size: 34px;
   border: none;
   cursor: pointer;
@@ -71,18 +112,4 @@ button {
   text-align: left;
   padding-left: 44px;
   font-size: 33px;
-}
-
-.historyBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  height: 30px;
-  width: 30px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  background-color: #fe9d07;
-  border-radius: 50%;
-  color: white;
 }/*# sourceMappingURL=style.css.map */

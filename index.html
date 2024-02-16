@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Shalini's Iphone</h1>
     <div class="calculator">
+      <div class="dynamic-island">
+        <div class="camera"></div>
+        <div class="notificationPanel"></div>
+      </div>
       <input type="text" id="result" class="result" disabled />
       <div class="buttons">
         <button class="ac" onclick="toggleCalculator()">OFF</button>
-        <button class="clearInp" onclick="clearInput()">C</button>
+        <button class="clearInp" onclick="clearInput()">AC</button>
         <button onclick="backspace()">&larr;</button>
         <button onclick="appendOperator('/')">÷</button>
         <button class="numbers" onclick="appendNumber('7')">7</button>
         <button class="numbers" onclick="appendNumber('8')">8</button>
         <button class="numbers" onclick="appendNumber('9')">9</button>
-        <button onclick="appendOperator('*')">*</button>
+        <button onclick="appendOperator('*')">&times</button>
         <button class="numbers" onclick="appendNumber('4')">4</button>
         <button class="numbers" onclick="appendNumber('5')">5</button>
         <button class="numbers" onclick="appendNumber('6')">6</button>
@@ -27,7 +32,7 @@
         <button class="numbers" onclick="appendNumber('3')">3</button>
         <button onclick="appendOperator('+')">+</button>
         <button class="zero numbers" onclick="appendNumber('0')">0</button>
-        <button onclick="appendDecimal()">.</button>
+        <button onclick="appendDecimal()">&#x2022</button>
         <button class="equal" onclick="calculate()">=</button>
       </div>
     </div>
