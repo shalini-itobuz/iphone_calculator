@@ -1,5 +1,5 @@
-$color_1: white;
-$font-family_1: Arial, sans-serif;
+$color_white: white;
+$font-family: Arial, sans-serif;
 $background-color_white: white;
 $background-color_black: black;
 $background-color_orange: #fe9d07;
@@ -14,7 +14,7 @@ $background-color_blackgrey: #333333;
 
 body {
   background-color: $background-color_white;
-  font-family: $font-family_1;
+  font-family: $font-family;
   margin: auto;
 }
 
@@ -36,7 +36,7 @@ h1 {
   outline: 20px solid #f7d2d2;
 }
 
-.dynamic-island {
+.dynamicIsland {
   width: 30%;
   height: 3%;
   background-color: #ccc;
@@ -73,7 +73,7 @@ h1 {
   margin-bottom: 10px;
   margin-top: 5px;
   background-color: $background-color_black;
-  color: $color_1;
+  color: $color_white;
   border: none;
   border-bottom: 2px solid #ccc;
   text-align: right;
@@ -96,7 +96,7 @@ button {
   cursor: pointer;
   background-color: $background-color_orange;
   border-radius: 50%;
-  color: $color_1;
+  color: $color_white;
 }
 
 .equal {
