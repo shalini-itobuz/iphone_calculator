@@ -17,7 +17,7 @@ function appendNumber(num) {
 
 function appendOperator(operator) {
   if (!calculatorOn || currentResult === "") return;
-  if(typeof currentResult === 'string') currentResult = currentResult.replace(/[+\-*/]$/, "");
+  if (typeof currentResult === 'string') currentResult = currentResult.replace(/[+\-*/]$/, "");
   currentResult += operator;
   decimalAdded = false;
   updateDisplay(currentResult);
@@ -141,7 +141,7 @@ document.addEventListener("keydown", function (event) {
   console.log(key);
   if (key >= "0" && key <= "9") {
     appendNumber(key);
-  } else if (key === "+" || key === "-" || key === "*" || key === "/" || key==='.') {
+  } else if (key === "+" || key === "-" || key === "*" || key === "/" || key === '.') {
     appendOperator(key);
   }
   else if (key === 'Backspace') {
