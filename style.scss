@@ -120,3 +120,32 @@ button {
   padding-left: 33px;
   font-size: 30px;
 }
+
+.powerBtn,
+.volumeUp,
+.volumeDown {
+  background-color: #f39292;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.powerBtn {
+  width: 5px;
+  height: 104px;
+  top: 19%;
+  left: 105%;
+}
+
+.volumeUp,
+.volumeDown {
+  height: 57px;
+  width: 6px;
+}
+.volumeUp {
+  top: 18%;
+  left: -7%;
+}
+.volumeDown {
+  top: 28%;
+  left: -7%;
+}
