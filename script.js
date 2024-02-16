@@ -17,6 +17,7 @@ function appendNumber(num) {
 
 function appendOperator(operator) {
   if (!calculatorOn || currentResult === "") return;
+  if(typeof currentResult === 'string') currentResult = currentResult.replace(/[+\-*/]$/, "");
   currentResult += operator;
   decimalAdded = false;
   updateDisplay(currentResult);
