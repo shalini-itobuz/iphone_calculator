@@ -77,7 +77,7 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 20px;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin-top: 6%;
 }
 
@@ -143,4 +143,6 @@ button {
 .volumeDown {
   top: 28%;
   left: -7%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
